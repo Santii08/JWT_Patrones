@@ -18,8 +18,8 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam String username, @RequestParam String password) {
-        User user = userService.validateUser(username, password);
+    public String login(@RequestBody User loginRequest) {
+        User user = userService.validateUser(loginRequest.getUsername(), loginRequest.getPassword());
         if (user == null) {
             return "Usuario o clave inválidos";
         }

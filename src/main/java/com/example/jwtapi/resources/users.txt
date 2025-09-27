@@ -1,3 +1,0 @@
-daniel,clave,basic
-andrea,otraclave,admin
-santiago;unaclavemasdificil,basic
